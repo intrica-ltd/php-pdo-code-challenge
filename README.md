@@ -11,10 +11,7 @@ and send Mark an email (`mark@intrica.net`) - We'll check it over and get back t
 
 ## Installation & Setup
  
- - Clone down this repository (or make a fork)
- ```
-    git clone https://github.com/intrica-ltd/php-pdo-coding-challenge.git intrica-coding-challenge    
-```
+ - Make a fork of this repository
 
  - Install MySQL (if it's not already installed), run the .sql file included in this repo to create a database called `intrica-code-challenge`
  complete with a dummy data set you'll be building functionality to run queries on.
@@ -25,7 +22,7 @@ and send Mark an email (`mark@intrica.net`) - We'll check it over and get back t
     composer install
 ```
  
- - Make a copy of the `database.config.php.dist` file and rename it to `database.config.php`, Adjust the values to match your local machine's database setup 
+ - Make a copy of the `database.config.php.dist` file located in the `config` directory and rename the copy to `database.config.php`, Adjust the values to match your local machine's database setup 
  
  - Start up a PHP server so you can see the results of your work, if you're using PHPStorm we've included our `.idea` which has a run config already setup 
  ```
