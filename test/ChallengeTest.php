@@ -3,13 +3,14 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
-use Intrica\Main;
+
+use Intrica\Challenge;
 use Intrica\PdoBuilder;
 
 /**
- * @testdox Main Class Tests
+ * @testdox Challenge Class Tests
  */
-class MainTest extends TestCase
+class ChallengeTest extends TestCase
 {
     protected $instance;
     protected $fixture;
@@ -18,7 +19,7 @@ class MainTest extends TestCase
     {
         $config = require_once __DIR__ . '/../config/database.config.php';
 
-        $this->setInstance(new Main($config));
+        $this->setInstance(new Challenge($config));
         $this->setFixture(include __DIR__ . '/fixtures/records.php');
     }
 
@@ -39,6 +40,11 @@ class MainTest extends TestCase
     {
         $directors = $this->getInstance()->getDirectorRecords();
 
+        if(!$directors)
+        {
+            $this->fail("No results received");
+        }
+
         $this->assertCount(1000, $directors);
         $this->assertIsArray($directors);
     }
@@ -57,6 +63,11 @@ class MainTest extends TestCase
             'occupation',
             'date_of_birth'
         ];
+
+        if(!$director)
+        {
+            $this->fail("No results received");
+        }
 
         foreach($requiredKeys as $key)
         {
@@ -83,6 +94,11 @@ class MainTest extends TestCase
             'date_of_birth'
         ];
 
+        if(!$director)
+        {
+            $this->fail("No results received");
+        }
+
         foreach($requiredKeys as $key)
         {
             $this->assertArrayHasKey($key, $director);
@@ -98,6 +114,11 @@ class MainTest extends TestCase
     public function testGetBusinessRecords()
     {
         $businesses = $this->getInstance()->getBusinessRecords();
+
+        if(!$businesses)
+        {
+            $this->fail("No results received");
+        }
 
         $this->assertCount(1000, $businesses);
         $this->assertIsArray($businesses);
@@ -117,6 +138,11 @@ class MainTest extends TestCase
             'registration_date',
             'registration_number'
         ];
+
+        if(!$business)
+        {
+            $this->fail("No results received");
+        }
 
         foreach($requiredKeys as $key)
         {
@@ -143,6 +169,11 @@ class MainTest extends TestCase
             'registration_number'
         ];
 
+        if(!$business)
+        {
+            $this->fail("No results received");
+        }
+
         foreach($requiredKeys as $key)
         {
             $this->assertArrayHasKey($key, $business);
@@ -158,6 +189,11 @@ class MainTest extends TestCase
     public function testGetBusinessNameWithDirectorFullNameTest()
     {
         $results = $this->getInstance()->getBusinessNameWithDirectorFullName();
+
+        if(!$results)
+        {
+            $this->fail("No results received");
+        }
 
         for($i = 0; $i < 1000; $i++)
         {
@@ -175,6 +211,11 @@ class MainTest extends TestCase
     public function testGetBusinessesRegisteredIn2005()
     {
         $results = $this->getInstance()->getBusinessesRegisteredInYear(2005);
+
+        if(!$results)
+        {
+            $this->fail("No results received");
+        }
 
         foreach($results as $result)
         {
@@ -200,6 +241,11 @@ class MainTest extends TestCase
             'occupation',
             'date_of_birth'
         ];
+
+        if(!$results)
+        {
+            $this->fail("No results received");
+        }
 
         foreach($results as $director)
         {
@@ -235,7 +281,7 @@ class MainTest extends TestCase
      * @param Main $instance
      * @return $this
      */
-    public function setInstance(Main $instance)
+    public function setInstance(Challenge $instance)
     {
         $this->instance = $instance;
         return $this;

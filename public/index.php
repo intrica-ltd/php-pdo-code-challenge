@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$app = new Intrica\Main();
+$app = new Intrica\Challenge();
 $content = null;
 
 $records = $app->getRecords();

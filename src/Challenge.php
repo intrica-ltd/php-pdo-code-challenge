@@ -2,9 +2,8 @@
 
 namespace Intrica;
 
-class Main
+class Challenge
 {
-    protected $pdo;
     protected $pdoBuilder;
 
     public function __construct()
