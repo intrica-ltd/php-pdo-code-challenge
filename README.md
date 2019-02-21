@@ -24,11 +24,11 @@ and send Mark an email (`mark@intrica.net`) - We'll check it over and get back t
  
  - Make a copy of the `database.config.php.dist` file located in the `config` directory and rename the copy to `database.config.php`, Adjust the values to match your local machine's database setup 
  
- - Start up a PHP server so you can see the results of your work, if you're using PHPStorm we've included our `.idea` which has a run config already setup 
+ - Start up a PHP server so you can see the results of your work
  ```
     php -S 0.0.0.0:8080 -t public
  ```
  
  - Navigate to [localhost:8080](http://localhost:8080) and you should see a blank table with a few table headings
  
- - Open the `Main` class (located in `src/Main.php`) and write some method bodies that fulfill the requirements given in the comments
+ - Open the `Challenge` class (located in `src/Challenge.php`) and write some method bodies that fulfill the requirements given in the comments
