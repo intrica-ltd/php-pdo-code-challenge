@@ -9,6 +9,31 @@ the criteria - You can run these yourself if you like by calling `composer test`
 Once you've finished and you're confident you have completed the code challenge push your code to your clone of this repository
 and send Mark an email (`mark@intrica.net`) with a link to your clone - We'll check it over and get back to you with some feedback.
 
+## Required Environment
+
+You will need a machine with PHP, MySQL & Composer installed to complete this challenge.
+If you don't have these things set up here's a few resources to help;
+
+**Windows**
+
+- [Installing PHP on Windows](https://www.sitepoint.com/how-to-install-php-on-windows/)
+- [MySQL Installer](https://dev.mysql.com/downloads/mysql/)
+- [Installing Composer on Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
+
+**Mac**
+
+- PHP is included out of the box with MacOS
+- [MySQL Installer](https://dev.mysql.com/downloads/mysql/)
+- [Installing Composer on Mac](https://www.abeautifulsite.net/installing-composer-on-os-x)
+
+**Linux**
+
+Refer to your distribution's documentation for PHP, MySQL & Composer
+
+---
+
+If you already have your own setup in place, you are of course free to use it.
+
 ## Installation & Setup
  
  - Clone this repository
