@@ -1,17 +1,17 @@
 # Intrica Code Challenge
 This coding challenge is designed to test your ability to work with PDO and SQL Queries
-from within PHP. Within the `Main` class there are several empty method bodies and some comments detailing
+from within PHP. Within the `Challenge` class there are several empty method bodies and some comments detailing
 what each method should do.
 
 There are a few unit tests included in this repo which will double check your code to make sure it fulfills
 the criteria - You can run these yourself if you like by calling `composer test` on the command line.
 
-Once you've finished and you're confident you have completed the code challenge push your code to your repository/fork
-and send Mark an email (`mark@intrica.net`) - We'll check it over and get back to you with some feedback.
+Once you've finished and you're confident you have completed the code challenge push your code to your clone of this repository
+and send Mark an email (`mark@intrica.net`) with a link to your clone - We'll check it over and get back to you with some feedback.
 
 ## Installation & Setup
  
- - Make a fork of this repository
+ - Clone this repository
 
  - Install MySQL (if it's not already installed), run the .sql file included in this repo to create a database called `intrica-code-challenge`
  complete with a dummy data set you'll be building functionality to run queries on.
